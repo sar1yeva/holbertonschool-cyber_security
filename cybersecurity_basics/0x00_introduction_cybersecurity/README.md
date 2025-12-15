@@ -130,8 +130,4 @@ MFA requires **two or more verification methods**:
 * **Endpoint security:** Anti-malware, secure devices
 * **Redundancy & failover:** Ensure availability
 
----
 
-If you want, I can also **make a super compact one-page cheat sheet** summarizing all 13 objectives for **quick revision before exams or practicals**.
-
-Do you want me to do that?

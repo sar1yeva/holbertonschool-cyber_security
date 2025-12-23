@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo netstat -lt
+sudo netstat -at | grep ':80'

@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo iptables -p tcp -dport 80 
+sudo ufw allow 80

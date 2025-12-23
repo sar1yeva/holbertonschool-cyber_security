@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo netstat -at | grep ':80'
+sudo iptables -p tcp -dport 80 

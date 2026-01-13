@@ -1,1 +1,1 @@
-tcp.flags.fin == 1 and tcp.flags == 0x001
+tcp.flags == 0x001

@@ -1,3 +1,3 @@
 #!/bin/bash
-john --wordlist=/usr/share/wordlists/rockyou.txt "$1" > /dev/null 2>&1
-john --show "$1" | head -n -1 | cut -d: -f2 > 4-password.txt
+john --format=Raw-SHA256 --wordlist=/usr/share/wordlists/rockyou.txt "$1"
+john --format=Raw-SHA256 --show "$1" | cut -d: -f2 | head -n -3 > 4-password.txt

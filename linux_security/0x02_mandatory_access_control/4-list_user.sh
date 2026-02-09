@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo semanage login -l
+sudo semanage login -l | grep user

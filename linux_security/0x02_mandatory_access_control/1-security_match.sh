@@ -1,2 +1,2 @@
 #!/bin/bash
-aa-status
+sudo aa-status

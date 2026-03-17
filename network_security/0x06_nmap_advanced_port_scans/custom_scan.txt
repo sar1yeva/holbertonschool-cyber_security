@@ -1,0 +1,19 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-03-17 08:57 EDT
+Nmap scan report for www.holbertonschool.com (198.202.211.1)
+Host is up (0.00046s latency).
+Other addresses for www.holbertonschool.com (not scanned): 2620:cb:2000::1
+
+PORT   STATE  SERVICE
+80/tcp closed http
+81/tcp closed hosts2-ns
+82/tcp closed xfer
+83/tcp closed mit-ml-dev
+84/tcp closed ctf
+85/tcp closed mit-ml-dev
+86/tcp closed mfcobol
+87/tcp closed priv-term-l
+88/tcp closed kerberos-sec
+89/tcp closed su-mit-tg
+90/tcp closed dnsix
+
+Nmap done: 1 IP address (1 host up) scanned in 0.58 seconds

@@ -1,2 +1,12 @@
-#!/bin/bash
-sudo nmap --scanflags URGACKPSHRSTSYNFIN -p $2 -oN custom_scan.txt $1 > /dev/null 2>&1
+\#!/bin/bash
+
+# Check arguments
+if [ $# -ne 2 ]; then
+    exit 1
+fi
+
+HOST="$1"
+PORTS="$2"
+
+# Run scan
+sudo nmap --scanflags URGACKPSHRSTSYNFIN -p "$PORTS" -oN custom_scan.txt "$HOST" > /dev/null 2>&1

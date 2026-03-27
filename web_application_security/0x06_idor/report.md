@@ -54,7 +54,7 @@ The application exposes direct references to internal objects such as account id
 
 #### **Technical Analysis**
 
-The `/accounts/{id}` endpoint returns account details based solely on the provided identifier, without verifying whether the authenticated user is authorized to access the requested resource.
+The `api/accounts/info/{id}` endpoint returns account details based solely on the provided identifier, without verifying whether the authenticated user is authorized to access the requested resource.
 
 This indicates a lack of server-side access control validation.
 

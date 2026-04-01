@@ -15,7 +15,6 @@ pid = sys.argv[1]
 search = sys.argv[2].encode()
 replace = sys.argv[3].encode()
 
-# Replace string must not be longer
 if len(replace) > len(search):
     print("Error: replace_string must not be longer than search_string")
     sys.exit(1)
@@ -53,13 +52,11 @@ try:
         index = heap.find(search)
 
         while index != -1:
-            print("Found at offset: {}".format(hex(heap_start + index)))
-
             mem.seek(heap_start + index)
             mem.write(replace + b'\x00' * (len(search) - len(replace)))
 
             index = heap.find(search, index + 1)
 
-except Exception as e:
+except Exception:
     print("Error:", e)
     sys.exit(1)

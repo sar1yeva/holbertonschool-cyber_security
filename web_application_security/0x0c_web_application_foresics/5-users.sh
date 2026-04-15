@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -E "useradd|adduser" auth.log* | awk '{print $NF}' | sort -u | paste -sd,
+grep 'useradd' auth.log | awk -F 'name=' '{print $2}' | awk '{print $1}' | tr -d ',' | sort -u | paste -sd ',' -

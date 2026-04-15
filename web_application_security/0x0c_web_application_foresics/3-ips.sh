@@ -1,2 +1,2 @@
 #!/bin/bash
-grep "Accepted" auth.log* | grep "from" | awk '{for(i=1;i<=NF;i++){if($i=="from"){print $(i+1)}}}' | sort -u | wc -l
+awk '$9 == 200 {print $1}' access.log | sort -u | wc -l

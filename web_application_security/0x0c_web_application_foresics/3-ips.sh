@@ -1,2 +1,2 @@
 #!/bin/bash
-awk '$9 == 200 {print $1}' access.log | sort -u | wc -l
+grep "Accepted" auth.log 2>/dev/null | grep -oE "from ([0-9]+\.){3}[0-9]+" | awk '{print $2}' | sort -u | wc -l

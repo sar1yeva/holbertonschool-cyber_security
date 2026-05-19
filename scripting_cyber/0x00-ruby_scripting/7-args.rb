@@ -1,14 +1,11 @@
 #!/usr/bin/env ruby
 
 def print_arguments
-  args = ARGV
+  puts "Arguments:"
 
-  if args.empty?
-    puts "No arguments provided."
-    return
-  end
-
-  args.each_with_index do |arg, index|
-    puts "#{index + 1}. #{arg}"
+  ARGV.each do |arg|
+    puts arg
   end
 end
+
+print_arguments

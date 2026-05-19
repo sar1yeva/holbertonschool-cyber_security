@@ -38,18 +38,12 @@ end.parse!
 
 tasks = load_tasks
 
-if options[:add]
+if options.key?(:add)
   tasks << options[:add]
   save_tasks(tasks)
   puts "Task '#{options[:add]}' added."
 
-elsif options[:list]
-  puts "Tasks:"
-  tasks.each do |task|
-    puts task
-  end
-
-elsif options[:remove]
+elsif options.key?(:remove)
   index = options[:remove] - 1
 
   if index >= 0 && index < tasks.length
@@ -57,4 +51,8 @@ elsif options[:remove]
     save_tasks(tasks)
     puts "Task '#{removed}' removed."
   end
+
+elsif options[:list]
+  puts "Tasks:"
+  tasks.each { |task| puts task }
 end

@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 def print_arguments
   args = ARGV
 

@@ -7,7 +7,7 @@ if ARGV.length != 2
   exit
 end
 
-target_hash = ARGV[0]
+hashed_password = ARGV[0]
 dictionary_file = ARGV[1]
 
 begin
@@ -17,7 +17,7 @@ begin
 
     hash = Digest::SHA256.hexdigest(word)
 
-    if hash == target_hash
+    if hash == hashed_password
       puts "Password found: #{word}"
       exit
     end

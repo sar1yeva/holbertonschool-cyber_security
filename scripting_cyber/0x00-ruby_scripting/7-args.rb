@@ -8,5 +8,3 @@ def print_arguments
     puts arg
   end
 end
-
-print_arguments

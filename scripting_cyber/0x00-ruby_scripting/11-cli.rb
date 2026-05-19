@@ -44,8 +44,9 @@ if options[:add]
   puts "Task '#{options[:add]}' added."
 
 elsif options[:list]
-  tasks.each_with_index do |task, i|
-    puts "#{i + 1}. #{task}"
+  puts "Tasks:"
+  tasks.each do |task|
+    puts task
   end
 
 elsif options[:remove]

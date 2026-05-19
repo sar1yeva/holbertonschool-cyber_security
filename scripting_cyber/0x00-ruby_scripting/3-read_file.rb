@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
+
 require 'json'
+
 def count_user_ids(path)
   file = File.read(path)
   data = JSON.parse(file)
